@@ -1,0 +1,75 @@
+{% extends 'testapp/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static "css/aboutus.css" %}">
+<img class="left" src="{% static "images/image1.jpg" %}" alt="">
+    <meta charset="utf-8">
+    <title>About us</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body_block %}
+    <section class="team">
+        <h1>OUR TEAM</h1>
+        <div class="row">
+         <div class="col-md-3 profile text-center">
+           <div class="img-box">
+             <img src="{% static "images/aboutus.jpg" %}" class="img-responsive" >
+              <ul>
+            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+             </ul>
+           </div>
+           <h2>Gaurav Kumar</h2>
+           <h3>Founder/ CEO</h3>
+           <p>Enhancing the Better tommorow</p>
+         </div>
+         <div class="col-md-3 profile text-center">
+           <div class="img-box">
+             <img src="{% static "images/aboutus.jpg" %}" class="img-responsive" >
+              <ul>
+            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+             </ul>
+           </div>
+           <h2>Jayank Mahaur</h2>
+           <h3>UI/UX Designer</h3>
+           <p>Enhancing the Better tommorow</p>
+         </div>
+         <div class="col-md-3 profile text-center">
+           <div class="img-box">
+             <img src="{% static "images/aboutus.jpg" %}" class="img-responsive" >
+              <ul>
+
+            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+             </ul>
+           </div>
+           <h2>Vinit Garg</h2>
+           <h3>Technical Head</h3>
+           <p>Enhancing the Better tommorow</p>
+         </div>
+         <div class="col-md-3 profile text-center">
+           <div class="img-box">
+             <img src="{% static "images/aboutus.jpg" %}" class="img-responsive" >
+              <ul>
+
+            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+             <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+             </ul>
+           </div>
+           <h2>Tushar Mittal</h2>
+           <h3>Marketing Head</h3>
+           <p>Enhancing the Better tommorow</p>
+         </div>
+
+        </div>
+    </section>
+{% endblock %}

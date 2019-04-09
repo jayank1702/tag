@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Resident Details...</h1><hr><br><hr>
+    <ul>
+      <li>ID : {{resident.rid}}</li>
+      <li>Name : {{resident.name}}</li>
+      <li>Phonenumber : {{resident.phonenumber}}</li>
+      <li>Address  : {{resident.address}}</li>
+      <li>Email  : {{resident.email}}</li>
+      <li>Father's Name  : {{resident.fathersname}}</li>
+      <li>Occupation  : {{resident.occupation}}</li>
+      <li>Vehicle Number  : {{resident.vehiclenumber}}</li>
+      <li>Id Proof  : {{resident.idproof}}</li>
+      <li>Status  : {{resident.status}}</li>
+    </ul>
+    <a class="btn btn-lg btn-primary" href="/residents">Click here to view list of the Resident..!!</a>
+    <!-- <h2><a href="/{{resident.rid}}/visitor"> Click here to view the List Visitor of the Resident </a></h2> -->
+  </div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <h1>Worker Information Dashboard</h1>
+  <table border="2">
+    <thead>
+      <th>Worker ID</th>
+      <th>Worker Name</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tr>
+      {% for worker in worker_list %}
+      <td>{{worker.wid|title}}</td>
+      <td>{{worker.name|title}}</td>
+      <td> <a href="/worker/{{worker.wid}}">Details</a></td>
+      <td> <a href="/updateworker/{{worker.wid}}">Update</a></td>
+      <td> <a href="/deleteworker/{{worker.wid}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table><br><br><br>
+  <a class="btn btn-lg btn-primary" href="/createworker">Click here to insert a new Worker..!!</a>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <h1>Visitor information DashBoard</h1>
+  <table border="2">
+    <thead>
+      <th>Name</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tr>
+      {% for visitor in visitor_list %}
+      <td>{{visitor.name|title}}</td>
+      <td> <a href="/visitor/{{visitor.vid}}">Details</a></td>
+      <td> <a href="/updatevisitor/{{visitor.vid}}">Update</a></td>
+      <td> <a href="/deletevisitor/{{visitor.vid}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table><br><br><br>
+  <a class="btn btn-lg btn-primary" href="/createvisitor">Do you want to insert a new visitor..?</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Delivery Details...</h1><hr><br><hr>
+    <ul>
+      <li>ID : {{delivery.did}}</li>
+      <li>Company Name : {{delivery.company}}</li>
+      <li>Resident Name : {{delivery.resident}}</li>
+      <li>Vehicle Number  : {{delivery.vehiclenumber}}</li>
+      <li>Status  : {{delivery.status}}</li>
+    </ul>
+    <a class="btn btn-lg btn-primary" href="/deliverys">Click here to view list of the Deliveries..!!</a>
+    <!-- <h2><a href="/{{resident.rid}}/visitor"> Click here to view the List Visitor of the Resident </a></h2> -->
+  </div>
+
+{% endblock %}

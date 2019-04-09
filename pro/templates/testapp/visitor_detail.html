@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Visitor Details...</h1><hr><br><hr>
+    <ul>
+      <li>Resident : {{visitor.resident}}</li>
+      <li>ID : {{visitor.vid}}</li>
+      <li>Name : {{visitor.name}}</li>
+      <li>Resident : {{visitor.resident}}</li>
+      <li>Mobile Number: {{visitor.mobilenumber}}</li>
+      <li>Address to Visit : {{visitor.address_to_visit}}</li>
+      <li>Purpose of Visit : {{visitor.purpose_of_visit}}</li>
+      <li>Vehicle Number : {{visitor.vehiclenumber}}</li>
+      <li>Date : {{visitor.date}}</li>
+      <li>Status : {{visitor.status}}</li>
+    </ul>
+        <a class="btn btn-lg btn-primary" href="/visitors">Click here to view list of the Visitor..!!</a>
+  </div>
+
+{% endblock %}

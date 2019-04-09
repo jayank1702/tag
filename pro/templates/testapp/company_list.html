@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <h1>Company information DashBoard</h1>
+  <table border="2">
+    <thead>
+      <th>Company ID</th>
+      <th>Company Name</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tr>
+      {% for company in company_list %}
+      <td>{{company.cid|title}}</td>
+      <td>{{company.name|title}}</td>
+      <td> <a href="/company/{{company.cid}}">Details</a></td>
+      <td> <a href="/updatecompany/{{company.cid}}">Update</a></td>
+      <td> <a href="/deletecompany/{{company.cid}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table><br><br><br>
+  <a class="btn btn-lg btn-primary" href="/createcompany">Click here to insert a new Company..!!</a>
+{% endblock %}

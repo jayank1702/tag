@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <h1>Delivery information DashBoard</h1>
+  <table border="2">
+    <thead>
+      <th>Delivery ID</th>
+      <th>Company Name</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tr>
+      {% for delivery in delivery_list %}
+      <td>{{delivery.did|title}}</td>
+      <td>{{delivery.company|title}}</td>
+      <td> <a href="/delivery/{{delivery.did}}">Details</a></td>
+      <td> <a href="/updatedelivery/{{delivery.did}}">Update</a></td>
+      <td> <a href="/deletedelivery/{{delivery.did}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table><br><br><br>
+  <a class="btn btn-lg btn-primary" href="/createdelivery">Click here to insert a new Delivery..!!</a>
+{% endblock %}

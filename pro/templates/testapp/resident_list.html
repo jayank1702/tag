@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+
+{% block body_block %}
+  <h1>Resident information DashBoard</h1>
+  <table border="2">
+    <thead>
+      <th>Resident ID</th>
+      <th>Resident Name</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tr>
+      {% for resident in resident_list %}
+      <td>{{resident.rid|title}}</td>
+      <td>{{resident.name|title}}</td>
+      <td> <a href="/{{resident.rid}}">Details</a></td>
+      <td> <a href="/update/{{resident.rid}}">Update</a></td>
+      <td> <a href="/delete/{{resident.rid}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table><br><br><br>
+  <a class="btn btn-lg btn-primary" href="/create">Click here to insert a new Resident..!!</a>
+{% endblock %}
